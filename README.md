@@ -1,19 +1,19 @@
-# Secret-Sharing
+# 秘密分散法(Secret Sharing)
 
-## Introduction
-The secret sharing scheme is a security technique that consists of a fairly fundamental theory of information secrecy. Resistance to information leakage is one of the most popular research topics in this field, and papers on this research are presented every year at CRYPTO, a well-known international conference in the field of cryptography.
-I am also working on this field in my laboratory. I will try to write about the results of my research so far, using as few technical terms as possible.
+## 概要
+秘密分散方式は、情報の秘密保持に関するかなり基礎的な理論に基づくセキュリティ技術です。情報漏洩への耐性は、この分野で最も注目されている研究テーマの一つであり、暗号学分野の著名な国際会議であるCRYPTOでは、毎年この研究に関する論文が発表されています。
 
 ## The secret sharing scheme
-The secret sharing scheme is a scheme for managing secret information in a distributed manner. The information after being distributed is generally called a share. For example, when messages are sent and received in secret, the original message is not known even if the transmitted information is seen by the receiver, because the shares are actually sent and received in a distributed manner. However, it is of course necessary to set up the share so that the original message can be restored at the receiving end.
-This process is briefly described below. First, the secret information is encoded as an integer on a finite body $`\mathbb{F}_{p}`$. The first step is to encode the secret information into an integer on a finite body $`\mathbb{F}_{p}`$, where $`p`$ is a prime number. I'll spare you the detailed explanation of finite bodies, but a detailed explanation of bodies is given by
->ガロア理論12講 概念と直観でとらえる現代数学入門(加藤 文元,2022)
+秘密分散方式は、秘密情報を分散して管理するための方式である。分散された後の情報は、一般に「シェア」と呼ばれる。例えば、メッセージを秘密裏に送受信する場合、実際にはシェアが分散して送受信されるため、受信者が送信された情報を見たとしても、元のメッセージは分からない。ただし、受信側で元のメッセージを復元できるように、シェアを設定する必要があるのは言うまでもない。
+このプロセスを以下に簡単に説明する。まず、秘密情報を有限体 $`\mathbb{F}_{p}`$ 上の整数として符号化する。最初のステップは、秘密情報を有限体 $`\mathbb{F}_{p}`$ 上の整数として符号化することであり、ここで $`p`$ は素数である。有限体の詳細な説明は割愛しますが、体に関する詳細な解説は
+>『ガロア理論12講 概念と直観でとらえる現代数学入門』（加藤 文元、2022年）
+を参照してみてください。ここで $`\mathbb{F}_{p}=\lbrace0,1,\ldots,p-1\rbrace`$ であり、4つの算術演算が $`p`$ の剰余演算（モジュロ演算）を用いて定義されることで、この集合上で閉じていることを理解すれば十分です。$`s`$ を符号化された整数値、$`n`$ をシェアの数、すなわち $`s`$ の分割の数としましょう。$`n=3`$ の場合のシェア生成プロセスのイメージは、次のようになります。
 
-So if you are interested, check it out. Here it is $`\mathbb{F}_{p}=\lbrace0,1,\ldots,p-1\rbrace`$, and it is sufficient to understand that the four arithmetic operations are closed on the set by defining them in terms of the remainder operations (modulo operations) of $`p`$. Let $`s`$ be the encoded integer value, and $`n`$ be the number of shares, i.e., the number of partitions of $`s`$. The image of the process of generating shares when $`n=3`$ looks like this.
+DeepL.com（無料版）で翻訳しました。
 ```mermaid
 graph LR
   Start([Secret])-->|encoder|A{s}
-  A-->|generating share|B{$$X_1$$}
+  A-->|generating share|B{X_1}
   A-->|generating share|C{X_2}
   A-->|generating share|D{X_n}
 ```
