@@ -18,7 +18,9 @@ graph LR
   A-->|generating share|D{X}
 ```
 
-## How to encode for $(n-1,n)$ threshold scheme
+## 秘密分散法の例
+### $(k, n)$ しきい値法
+秘密分散法の中で最も代表的で広く使われているモデルが「$(k, n)$ しきい値法」です。多項式の性質を利用した「シャミアの秘密分散法（Shamir's Secret Sharing）」などが有名です。$n$（総シェア数）: 秘密情報を分割して作成するシェアの全体数です。$k$（しきい値）: 元の秘密情報を復元するために、最低限集める必要があるシェアの数です。この方式では、$k$ 個以上のシェアを持ち寄れば元のデータを完全に復元できます。しかし、$k-1$ 個以下のシェアしか集まらなかった場合は、元の情報に関する手がかりを一切得ることができない（情報理論的安全性を満たす）ように数学的に設計されています。
 The 1~n-2 shares are generated according to a uniform random numbers.
 Let $X_{n-1}$ and $X_n$ be the shares of the n-1th and nth participant, and these are generated to satisfy the following simultaneous equations.
 
