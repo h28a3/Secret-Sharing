@@ -13,9 +13,9 @@ So if you are interested, check it out. Here it is $`\mathbb{F}_{p}=\lbrace0,1,\
 ```mermaid
 graph LR
   Start([Secret])-->|encoder|A{s}
-  A-->|generating share|B{X}
-  A-->|generating share|C{Y}
-  A-->|generating share|D{Z}
+  A-->|generating share|B{X_1}
+  A-->|generating share|C{X_2}
+  A-->|generating share|D{X_n}
 ```
 
 ## How to encode for $(n-1,n)$ threshold scheme
