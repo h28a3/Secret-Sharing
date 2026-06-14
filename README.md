@@ -130,7 +130,7 @@ $$
 - 巡回行列同士の積は可換
 - 同時対角化可能
 
-[Comparison Between Previous and Proposed method.pdf](https://github.com/user-attachments/files/28922116/Comparison.Between.Previous.and.Proposed.method.pdf)
+<img width="600" height="371" alt="Image" src="https://github.com/user-attachments/assets/8a8157f2-3bdd-4a28-80c3-00b719a541cf" />
 
 ## 参照
 	加法型(n,n)しきい値法における1ビットLeakageの変動距離の評価, 古賀弘樹 阿部浩人, SITA2024
