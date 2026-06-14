@@ -44,8 +44,10 @@ graph LR
 
 この方式では、$k$ 個以上のシェアを持ち寄れば元のデータを完全に復元できます。しかし、$k-1$ 個以下のシェアしか集まらなかった場合は、元の情報に関する手がかりを一切得ることができない（情報理論的安全性を満たす）ように数学的に設計されています。
 例として最も簡単な $k = n, n - 1$ の二つの方式を紹介します．
-The 1~n-2 shares are generated according to a uniform random numbers.
-Let $X_{n-1}$ and $X_n$ be the shares of the n-1th and nth participant, and these are generated to satisfy the following simultaneous equations.
+
+### $(n-1, n)$ しきい値法
+1～n-2番目のシェアは，一様乱数に基づいて生成します．
+$X_{n-1}$ と $X_n$ をそれぞれ $n-1$ 番目および $n$ 番目の参加者のシェアとし，これらは以下の連立方程式を満たすように生成される．
 
 $$
 s+\sum_{i=0}^nX_i=0
