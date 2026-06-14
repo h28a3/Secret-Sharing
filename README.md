@@ -101,10 +101,9 @@ $$
 
 と表される．
 
-## How to decode for $(n-1,n)$ threshold scheme
-When n-1 shares are gathered, the only unknowns in the above simultaneous equations are the other share and the secret.
-Furthermore, since the primitive element is not 1, the dimension of the coefficient matrix is 2.
-So the simultaneous equations can be solved.
+復号する際は $$n-1$$ 個のシェアが集まると，上記の連立方程式における未知数は，残りのシェアと秘密情報の2つだけとなる．
+さらに，原始元が1ではないため，係数行列の次元は2である．
+したがって，この連立方程式は一意の解をもつ．
 
 
 ## 参照
