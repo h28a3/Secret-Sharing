@@ -31,7 +31,7 @@ graph LR
   A-->|generating share|C{Y}
   A-->|generating share|D{Z}
   B-->|correcting share|E{s}
-  B-->|correcting share|E{s}
+  C-->|correcting share|E{s}
   E-->|decoder|F{Secret}
 ```
 
