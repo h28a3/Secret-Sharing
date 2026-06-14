@@ -57,7 +57,7 @@ $$
 s+\sum_{i=0}^n\alpha^i X_i=0
 $$
 
-$\alpha$ is one of primitive elements of a finite body $`\mathbb{F}_{p}`$. In matrix form,
+$\alpha$ は有限体 $`\mathbb{F}_{p}`$ の任意の原始元である．行列表記では，
 
 $$
 \begin{bmatrix}
