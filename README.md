@@ -30,6 +30,8 @@ graph LR
   A-->|generating share|B{X}
   A-->|generating share|C{Y}
   A-->|generating share|D{Z}
+  B-->|correcting share|E{s}
+  B-->|correcting share|F{s}
 ```
 
 ## 秘密分散法の例
