@@ -31,7 +31,8 @@ graph LR
   A-->|generating share|C{Y}
   A-->|generating share|D{Z}
   B-->|correcting share|E{s}
-  B-->|correcting share|F{s}
+  B-->|correcting share|E{s}
+  E-->|decoder|F{Secret}
 ```
 
 ## 秘密分散法の例
