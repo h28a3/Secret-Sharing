@@ -130,6 +130,8 @@ $$
 - 巡回行列同士の積は可換
 - 同時対角化可能
 
+<img width="640" height="480" alt="Image" src="https://github.com/user-attachments/assets/01597e40-e3e8-473d-834c-80f6d0f79e32" />
+
 ## 参照
 	加法型(n,n)しきい値法における1ビットLeakageの変動距離の評価, 古賀弘樹 阿部浩人, SITA2024
 	加法型(n,n)しきい値法における1ビットLeakage間の最悪の統計的距離の一般公式, 阿部浩人 古賀弘樹, SITA2025
