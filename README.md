@@ -20,14 +20,16 @@
 >『ガロア理論12講 概念と直観でとらえる現代数学入門』（加藤 文元、2022年）
 
 を参照してみてください．
-ここで $`\mathbb{F}_{p}=\lbrace0,1,\ldots,p-1\rbrace`$ であり、4つの算術演算が $`p`$ の剰余演算（モジュロ演算）を用いて定義されることで、この集合上で閉じていることを理解すれば十分です。$`s`$ を符号化された整数値、$`n`$ をシェアの数、すなわち $`s`$ の分割の数としましょう。$`n=3`$ の場合のシェア生成プロセスのイメージは、次のようになります。
+ここでは $`\mathbb{F}_{p}=\lbrace0,1,\ldots,p-1\rbrace`$ であり、加算と乗算が $`p`$ の剰余演算（モジュロ演算）を用いて定義され，減算と除算はそれぞれの逆の演算を行うことで，四則演算がこの集合上で閉じていることを理解すれば十分です．
+$`s`$ を符号化された整数値、$`n`$ をシェアの数、すなわち $`s`$ の分割の数とします．
+$`n=3`$ の場合のシェア生成プロセスのイメージは、次のようになります。
 
 ```mermaid
 graph LR
   Start([Secret])-->|encoder|A{s}
   A-->|generating share|B{X}
-  A-->|generating share|C{X}
-  A-->|generating share|D{X}
+  A-->|generating share|C{Y}
+  A-->|generating share|D{Z}
 ```
 
 ## 秘密分散法の例
@@ -86,3 +88,9 @@ $$
 When n-1 shares are gathered, the only unknowns in the above simultaneous equations are the other share and the secret.
 Furthermore, since the primitive element is not 1, the dimension of the coefficient matrix is 2.
 So the simultaneous equations can be solved.
+
+
+## 参照
+	加法型(n,n)しきい値法における1ビットLeakageの変動距離の評価, 古賀弘樹 阿部浩人, SITA2024
+	加法型(n,n)しきい値法における1ビットLeakage間の最悪の統計的距離の一般公式, 阿部浩人 古賀弘樹, SITA2025
+	New Tight Bounds on the Local Leakage Resilience of the Additive (n,n)-Threshold Scheme Determined by the Eigenvalues of Circulant Matrices, Hiroki Koga and Hiroto Abe, ASIACRYPT 2025
